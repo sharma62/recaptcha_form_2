@@ -1,2 +1,15 @@
 # recaptcha_form_2
-Google recaptch in Form. specially for anonmous script runing and unautorized access 
+
+* Project page: http://www.google.com/recaptcha/
+* Repository: https://github.com/sharma62/recaptcha_form_2 
+* Version: 0.1.0
+* License: BSD, see [LICENSE](LICENSE)
+
+## Description
+Google recaptch in Form. Specially for anonmous script runing in and unautorized access .
+
+      In Other Word ,
+                    reCAPTCHA is a free CAPTCHA service that protect websites from spam and abuse.
+                    This is Google authored code that provides plugins for third-party integration
+                    with reCAPTCHA. 
+
