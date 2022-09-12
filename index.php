@@ -9,6 +9,7 @@ require('constant.php');
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="component/jquery/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 	<script>
 		$(document).ready(function(e) {
 			$("#frmContact").on('submit', (function(e) {
@@ -143,6 +144,7 @@ require('constant.php');
 			margin: 0 0 25px 0;
 		}
 	</style>
+    <!-- It Enabled captcha fill junction  -->
 	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
