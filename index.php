@@ -150,7 +150,7 @@ require('constant.php');
 
 <body>
 
-	<div id="central">
+	<div id="central" class="container">
 		<div class="content">
 			<h1>Contact Form</h1>
 			<p>Send your comments through this form and we will get back to you. </p>
@@ -174,7 +174,7 @@ require('constant.php');
 					</div>
 					<div class="g-recaptcha" data-sitekey="<?php echo SITE_KEY; ?>"></div>
 					<div id="mail-status"></div>
-					<button type="Submit" id="send-message" style="clear:both;">Send Message</button>
+					<button type="Submit" class="btn btn-primary" id="send-message" style="clear:both;">Send Message</button>
 				</form>
 				<div id="loader-icon" style="display:none;"><img src="img/loader.gif" /></div>
 			</div>
