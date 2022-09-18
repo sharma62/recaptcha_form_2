@@ -8,8 +8,8 @@ require('constant.php');
 	<title>Contact Us</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	  <!-- Bootstrap CSS -->
-	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 	<script src="component/jquery/jquery-3.2.1.min.js"></script>
 	<script>
 		$(document).ready(function(e) {
@@ -47,23 +47,34 @@ require('constant.php');
 		});
 	</script>
 	<style>
-		input, .label {
+		input,
+		.label {
 			margin: 8px;
 		}
-		.body{
-			background-image: url();
+
+		.background-img {
+			background-image: url('https://www.designyourway.net/blog/wp-content/uploads/2018/12/programming-wallpaper7-800x600.jpg');
+			background-repeat: no-repeat;
+			background-position: right;
+			background-size: cover;
+			
+			border-radius: 10px;
+		}
+
+		b {
+			color: red;
 		}
 	</style>
- 
+
 	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
-<body >
+<body class="background-im">
 
-	<h1 class="text-center py-3 border-bottom" >Contact Me</h1>
-	<div id="central" class="container py-3">
-		<div class="content col">
-			<div id="message" class="row">
+	<h1 class="text-center py-3 border-bottom">Contact Me</h1>
+	<div id="central" class="container py-3 ">
+		<div class="content row">
+			<div id="message" class="col">
 				<form id="frmContact" action="" class="form" method="POST" novalidate="novalidate">
 					<div class="label">Name:</div>
 					<div class="field">
@@ -71,7 +82,7 @@ require('constant.php');
 					</div>
 					<div class="label">Email:</div>
 					<div class="field">
-						<input type="text" id="email"  class="form-control" name="email" placeholder="enter your email address here" title="Please enter your email address" class="required email" aria-required="true" required>
+						<input type="text" id="email" class="form-control" name="email" placeholder="enter your email address here" title="Please enter your email address" class="required email" aria-required="true" required>
 					</div>
 					<div class="label">Phone Number:</div>
 					<div class="field">
@@ -87,10 +98,11 @@ require('constant.php');
 				</form>
 				<div id="loader-icon" style="display:none;"><img src="img/loader.gif" /></div>
 			</div>
-		</div>   
-		<div class="row">
-
+			<div class="col background-img">
+				
+			</div>
 		</div>
+
 	</div>
 </body>
 

@@ -9,7 +9,7 @@ require('constant.php');
     $content   = $_POST["content"];
     
     if(empty($user_name)) {
-		$empty[] = "<b>Name</b>";		
+		$empty[] = "<b> Name</b>";		
 	}
 	if(empty($user_email)) {
 		$empty[] = "<b>Email</b>";
@@ -18,11 +18,11 @@ require('constant.php');
 		$empty[] = "<b>Phone Number</b>";
 	}	
 	if(empty($content)) {
-		$empty[] = "<b>Comments</b>";
+		$empty[] = "<b>Comments </b>";
 	}
 	
 	if(!empty($empty)) {
-		$output = json_encode(array('type'=>'error', 'text' => implode(", ",$empty) . ' Required!'));
+		$output = json_encode(array('type'=>'error', 'text' => implode(" , ",$empty) . ' Required!'));
         die($output);
 	} 
 	
