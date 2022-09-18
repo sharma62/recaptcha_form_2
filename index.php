@@ -54,28 +54,33 @@ require('constant.php');
 
 		.background-img {
 			background-image: url('https://www.designyourway.net/blog/wp-content/uploads/2018/12/programming-wallpaper7-800x600.jpg');
+			/* background-image: url('https://www.designyourway.net/blog/wp-content/uploads/2018/12/programming-wallpaper3.jpg'); */
 			background-repeat: no-repeat;
 			background-position: right;
 			background-size: cover;
-			
-			border-radius: 10px;
+			border-bottom-width: 10px;
+		
 		}
 
 		b {
 			color: red;
+		}
+		body{
+			color: white;
+			background-color: black;
 		}
 	</style>
 
 	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
-<body class="background-im">
+<body >
 
 	<h1 class="text-center py-3 border-bottom">Contact Me</h1>
 	<div id="central" class="container py-3 ">
-		<div class="content row">
-			<div id="message" class="col">
-				<form id="frmContact" action="" class="form" method="POST" novalidate="novalidate">
+		<div class="content row my-3">
+			<div id="message" class="col" style="background-color: white ; color:black ; ">
+				<form id="frmContact" action="" class="form " method="POST" novalidate="novalidate">
 					<div class="label">Name:</div>
 					<div class="field">
 						<input type="text" class="form-control" id="name" name="name" placeholder="enter your name here" title="Please enter your name" class="required" aria-required="true" required>
@@ -98,7 +103,7 @@ require('constant.php');
 				</form>
 				<div id="loader-icon" style="display:none;"><img src="img/loader.gif" /></div>
 			</div>
-			<div class="col background-img">
+			<div class="col-7 background-img">
 				
 			</div>
 		</div>
