@@ -5,8 +5,9 @@ require('constant.php');
     
     $user_name      = $_POST["name"] ;
     $user_email     = $_POST["email"];
+    $user_address   = $_POST["address"];
     $user_phone     = $_POST["phone"];
-    $content   = $_POST["content"];
+    $content   		= $_POST["content"];
     
     if(empty($user_name)) {
 		$empty[] = "<b> Name</b>";		
@@ -14,15 +15,18 @@ require('constant.php');
 	if(empty($user_email)) {
 		$empty[] = "<b>Email</b>";
 	}
+	if(empty($user_address)) {
+		$empty[] = "<b>Address</b>";
+	}
 	if(empty($user_phone)) {
 		$empty[] = "<b>Phone Number</b>";
 	}	
 	if(empty($content)) {
 		$empty[] = "<b>Comments </b>";
 	}
-	
+
 	if(!empty($empty)) {
-		$output = json_encode(array('type'=>'error', 'text' => implode(" , ",$empty) . ' Required!'));
+		$output = json_encode(array('type'=>'error', 'text' => implode(", ",$empty) . ' Required!'));
         die($output);
 	} 
 	
@@ -39,6 +43,16 @@ require('constant.php');
 		$recaptcha = new \ReCaptcha\ReCaptcha(SECRET_KEY);
 
 		$resp = $recaptcha->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
+	
+
+		// if ($resp['success']) {
+		// 	// send data into database 
+		// 	mysqli_query($conn, "INSERT INTO `data_table`( `name`, `email`, `mobile`, `massage`, `address`)
+		// 							VALUES ('$name','$email','$mobile','$massage','$address')");
+	
+		// }  
+
+		
 
 		  if (!$resp->isSuccess()) {
 				$output = json_encode(array('type'=>'error', 'text' => '<b>Captcha</b> Validation Required!'));
@@ -61,4 +75,3 @@ require('constant.php');
 	    die($output);
 	}
 }
-?>

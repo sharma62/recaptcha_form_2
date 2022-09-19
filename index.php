@@ -25,6 +25,7 @@ require('constant.php');
 					data: {
 						"name": $('input[name="name"]').val(),
 						"email": $('input[name="email"]').val(),
+						"address": $('input[name="address"]').val(),
 						"phone": $('input[name="phone"]').val(),
 						"content": $('textarea[name="content"]').val(),
 						"g-recaptcha-response": $('textarea[id="g-recaptcha-response"]').val()
@@ -79,7 +80,7 @@ require('constant.php');
 	<h1 class="text-center py-3 border-bottom">Contact Me</h1>
 	<div id="central" class="container py-3 ">
 		<div class="content row my-3">
-			<div id="message" class="col" style="background-color: white ; color:black ; ">
+			<div id="message" class="col" style="background-color: white ; color:black ;  ">
 				<form id="frmContact" action="" class="form " method="POST" novalidate="novalidate">
 					<div class="label">Name:</div>
 					<div class="field">
@@ -88,6 +89,10 @@ require('constant.php');
 					<div class="label">Email:</div>
 					<div class="field">
 						<input type="text" id="email" class="form-control" name="email" placeholder="enter your email address here" title="Please enter your email address" class="required email" aria-required="true" required>
+					</div>
+					<div class="label">Address:</div>
+					<div class="field">
+						<input type="text" id="address" class="form-control" name="address" placeholder="enter your  address here" title="Please enter your  address" class="required address" aria-required="true" required>
 					</div>
 					<div class="label">Phone Number:</div>
 					<div class="field">
@@ -103,7 +108,7 @@ require('constant.php');
 				</form>
 				<div id="loader-icon" style="display:none;"><img src="img/loader.gif" /></div>
 			</div>
-			<div class="col-7 background-img">
+			<div class="col-md-7 background-img ">
 				
 			</div>
 		</div>
