@@ -36,14 +36,18 @@ require('constant.php');
 						if (response.type == "error") {
 							$('#send-message').show();
 							$("#mail-status").attr("class", "error");
-						} else if (response.type == "message") {
+						}
+						if (response.type == "message") {
 							$('#send-message').hide();
-							$("#mail-status").attr("class", "success");
+							$("#mail-status").attr("class", "bg-success p-3 text-light");
+							$('#frmContact')[0].reset();
 						}
 						$("#mail-status").html(response.text);
+						console.log(response.type);
 					},
-					error: function() {}
+					error: function() { }
 				});
+				
 			}));
 		});
 	</script>
@@ -60,13 +64,14 @@ require('constant.php');
 			background-position: right;
 			background-size: cover;
 			border-bottom-width: 10px;
-		
+
 		}
 
 		b {
 			color: red;
 		}
-		body{
+
+		body {
 			color: white;
 			background-color: black;
 		}
@@ -75,9 +80,9 @@ require('constant.php');
 	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
-<body >
+<body>
 
-	<h1 class="text-center py-3 border-bottom">Contact Me</h1>
+ <h1 class="text-center py-3 border-bottom">Contact Me</h1>
 	<div id="central" class="container py-3 ">
 		<div class="content row my-3">
 			<div id="message" class="col" style="background-color: white ; color:black ;  ">
@@ -92,7 +97,7 @@ require('constant.php');
 					</div>
 					<div class="label">Address:</div>
 					<div class="field">
-						<input type="text" id="address" class="form-control" name="address" placeholder="enter your  address here" title="Please enter your  address" class="required address" aria-required="true" required>
+						<input type="text" id="address" class="form-control" name="address" placeholder="enter your  address here" title="Please enter your address" class="required address" aria-required="true" required>
 					</div>
 					<div class="label">Phone Number:</div>
 					<div class="field">
@@ -108,9 +113,7 @@ require('constant.php');
 				</form>
 				<div id="loader-icon" style="display:none;"><img src="img/loader.gif" /></div>
 			</div>
-			<div class="col-md-7 background-img ">
-				
-			</div>
+			<div class="col-md-7 background-img "></div>
 		</div>
 
 	</div>
