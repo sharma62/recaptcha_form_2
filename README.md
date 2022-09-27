@@ -21,3 +21,10 @@ Google recaptch in Form. Specially for anonmous script runing in and unautorized
 
 > Behind The Sence 
 
+- GO hit the link `contfact me page ` and land into page 
+- Fill all the information 
+- Validate reCaptcha 
+- Click on Submit btn 
+### Now move to Next step
+
+
