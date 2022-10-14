@@ -94,4 +94,6 @@ class ReCaptcha
         $rawResponse = $this->requestMethod->submit($params);
         return Response::fromJson($rawResponse);
     }
+    
 }
+
